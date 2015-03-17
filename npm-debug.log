@@ -1,0 +1,108 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/opt/nvm/v0.10.32/bin/node',
+1 verbose cli   '/usr/local/opt/nvm/v0.10.32/bin/npm',
+1 verbose cli   'adduser' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink /usr/local/opt/nvm/v0.10.32/bin/node
+5 warn Username must be lowercase
+6 verbose adduser before first PUT { name: 'cameron',
+6 verbose adduser   password: 'XXXXX',
+6 verbose adduser   email: 'cameron.klein@gmail.com',
+6 verbose adduser   _id: 'org.couchdb.user:cameron',
+6 verbose adduser   type: 'user',
+6 verbose adduser   roles: [],
+6 verbose adduser   date: '2015-03-17T02:24:14.361Z' }
+7 verbose request where is /-/user/org.couchdb.user:cameron
+8 verbose request registry https://registry.npmjs.org/
+9 verbose request id 568895d95b4df352
+10 verbose url raw /-/user/org.couchdb.user:cameron
+11 verbose url resolving [ 'https://registry.npmjs.org/',
+11 verbose url resolving   './-/user/org.couchdb.user:cameron' ]
+12 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:cameron
+13 verbose request where is https://registry.npmjs.org/-/user/org.couchdb.user:cameron
+14 info trying registry request attempt 1 at 19:24:14
+15 http PUT https://registry.npmjs.org/-/user/org.couchdb.user:cameron
+16 http 409 https://registry.npmjs.org/-/user/org.couchdb.user:cameron
+17 verbose headers { date: 'Tue, 17 Mar 2015 02:24:14 GMT',
+17 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+17 verbose headers   'content-type': 'application/json',
+17 verbose headers   'cache-control': 'max-age=60',
+17 verbose headers   'content-length': '58',
+17 verbose headers   'accept-ranges': 'bytes',
+17 verbose headers   via: '1.1 varnish',
+17 verbose headers   'x-served-by': 'cache-ord1730-ORD',
+17 verbose headers   'x-cache': 'MISS',
+17 verbose headers   'x-cache-hits': '0',
+17 verbose headers   'x-timer': 'S1426559054.871415,VS0,VE61',
+17 verbose headers   'keep-alive': 'timeout=10, max=50',
+17 verbose headers   connection: 'Keep-Alive' }
+18 verbose adduser update existing user
+19 verbose request where is /-/user/org.couchdb.user:cameron?write=true
+20 verbose request registry https://registry.npmjs.org/
+21 verbose url raw /-/user/org.couchdb.user:cameron?write=true
+22 verbose url resolving [ 'https://registry.npmjs.org/',
+22 verbose url resolving   './-/user/org.couchdb.user:cameron?write=true' ]
+23 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:cameron?write=true
+24 verbose request where is https://registry.npmjs.org/-/user/org.couchdb.user:cameron?write=true
+25 info trying registry request attempt 1 at 19:24:14
+26 http GET https://registry.npmjs.org/-/user/org.couchdb.user:cameron?write=true
+27 http 200 https://registry.npmjs.org/-/user/org.couchdb.user:cameron?write=true
+28 verbose adduser userobj { name: 'cameron',
+28 verbose adduser   password: 'XXXXX',
+28 verbose adduser   email: 'cameron.klein@gmail.com',
+28 verbose adduser   _id: 'org.couchdb.user:cameron',
+28 verbose adduser   type: 'user',
+28 verbose adduser   roles: [],
+28 verbose adduser   date: '2015-03-17T02:24:14.361Z' }
+29 verbose request where is /-/user/org.couchdb.user:cameron/-rev/1-d4e540f424a5e29e135e17de83ec7775
+30 verbose request registry https://registry.npmjs.org/
+31 verbose url raw /-/user/org.couchdb.user:cameron/-rev/1-d4e540f424a5e29e135e17de83ec7775
+32 verbose url resolving [ 'https://registry.npmjs.org/',
+32 verbose url resolving   './-/user/org.couchdb.user:cameron/-rev/1-d4e540f424a5e29e135e17de83ec7775' ]
+33 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:cameron/-rev/1-d4e540f424a5e29e135e17de83ec7775
+34 verbose request where is https://registry.npmjs.org/-/user/org.couchdb.user:cameron/-rev/1-d4e540f424a5e29e135e17de83ec7775
+35 info trying registry request attempt 1 at 19:24:15
+36 http PUT https://registry.npmjs.org/-/user/org.couchdb.user:cameron/-rev/1-d4e540f424a5e29e135e17de83ec7775
+37 http 401 https://registry.npmjs.org/-/user/org.couchdb.user:cameron/-rev/1-d4e540f424a5e29e135e17de83ec7775
+38 verbose headers { date: 'Tue, 17 Mar 2015 02:24:15 GMT',
+38 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+38 verbose headers   'content-type': 'application/json',
+38 verbose headers   'cache-control': 'max-age=60',
+38 verbose headers   'content-length': '67',
+38 verbose headers   'accept-ranges': 'bytes',
+38 verbose headers   via: '1.1 varnish',
+38 verbose headers   'x-served-by': 'cache-ord1727-ORD',
+38 verbose headers   'x-cache': 'MISS',
+38 verbose headers   'x-cache-hits': '0',
+38 verbose headers   'x-timer': 'S1426559055.597809,VS0,VE225',
+38 verbose headers   'keep-alive': 'timeout=10, max=50',
+38 verbose headers   connection: 'Keep-Alive' }
+39 verbose adduser back [ [Error: unauthorized Name or password is incorrect.: -/user/org.couchdb.user:cameron/-rev/1-d4e540f424a5e29e135e17de83ec7775],
+39 verbose adduser   { error: 'unauthorized',
+39 verbose adduser     reason: 'Name or password is incorrect.' },
+39 verbose adduser   '{"error":"unauthorized","reason":"Name or password is incorrect."}' ]
+40 warn adduser Incorrect username or password
+40 warn adduser You can reset your account by visiting:
+40 warn adduser
+40 warn adduser     https://npmjs.org/forgot
+41 error Error: unauthorized Name or password is incorrect.: -/user/org.couchdb.user:cameron/-rev/1-d4e540f424a5e29e135e17de83ec7775
+41 error     at RegClient.<anonymous> (/usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:308:14)
+41 error     at Request._callback (/usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
+41 error     at Request.self.callback (/usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/request/request.js:236:22)
+41 error     at Request.emit (events.js:98:17)
+41 error     at Request.<anonymous> (/usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+41 error     at Request.emit (events.js:117:20)
+41 error     at IncomingMessage.<anonymous> (/usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+41 error     at IncomingMessage.emit (events.js:117:20)
+41 error     at _stream_readable.js:943:16
+41 error     at process._tickCallback (node.js:419:13)
+42 error If you need help, you may report this *entire* log,
+42 error including the npm and node versions, at:
+42 error     <http://github.com/npm/npm/issues>
+43 error System Darwin 14.1.0
+44 error command "/usr/local/opt/nvm/v0.10.32/bin/node" "/usr/local/opt/nvm/v0.10.32/bin/npm" "adduser"
+45 error cwd /Users/cameron/dev/pooloperatornode
+46 error node -v v0.10.32
+47 error npm -v 1.4.28
+48 verbose exit [ 1, true ]
