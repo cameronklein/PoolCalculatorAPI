@@ -1,5 +1,10 @@
 var express = require('express')
+var mongoose = require('mongoose');
 var app = express();
+
+mongoose.connect(process.env.MONGO_URL ||
+                 process.env.MONGOLAB_URI ||
+                 'mongodb://localhost/poolcalculator');
 
 app.get('/', function(req, res) {
   console.log("Success!");
